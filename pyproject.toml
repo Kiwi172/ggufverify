@@ -1,0 +1,16 @@
+[project]
+name = "ggufverify"
+version = "0.1.0"
+description = "Is this GGUF file complete and internally consistent? Detects truncation and tensor-table corruption from the header alone. Stdlib-only."
+requires-python = ">=3.9"
+license = { text = "MIT" }
+
+[project.scripts]
+ggufverify = "ggufverify:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["ggufverify"]
